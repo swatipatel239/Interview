@@ -1,0 +1,58 @@
+﻿@model WebApplication2.AddData
+@{
+  
+    Layout = "~/Views/_Mytemplate.cshtml";
+}
+
+
+
+@using (Html.BeginForm("InsertData", "Home", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    if(@ViewBag.Message != null)
+    {
+        <div style="border:1px solid red">
+            @ViewBag.Message
+        </div>
+    }
+
+    <div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <h2>InsertData</h2>
+            
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+
+               
+                @Html.LabelFor(a=>a.Name)
+                @Html.TextBoxFor(a => a.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.Name)
+
+                @Html.LabelFor(a => a.Number)
+                @Html.TextBoxFor(a => a.Number, new { @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.Number)
+
+
+                @Html.LabelFor(a => a.Email)
+                @Html.TextBoxFor(a => a.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.Email)
+
+                @Html.LabelFor(a => a.Message)
+                @Html.TextBoxFor(a => a.Message, new { @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.Message)
+
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Insert Data</button>
+            
+                
+                
+            </form><!-- /form -->
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+
+   
+}

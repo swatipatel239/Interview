@@ -1,0 +1,21 @@
+﻿@model List<WebApplication2.AddData>
+
+   @{
+       ViewBag.Title = "Display Data";
+       var grid = new WebGrid(source: Model, canPage: true, rowsPerPage: 10);
+       grid.Pager(WebGridPagerModes.All);
+       Layout = "~/Views/_Mytemplate.cshtml";
+}
+
+    @grid.GetHtml(
+               
+               columns: new[]
+               {
+               grid.Column(columnName: "Name", header: "Name"),
+               grid.Column(columnName: "Message", header: "Message"),
+               grid.Column(columnName: "Number", header: "Number"),
+               grid.Column(columnName: "email", header: "Email"),
+
+               })
+
+
