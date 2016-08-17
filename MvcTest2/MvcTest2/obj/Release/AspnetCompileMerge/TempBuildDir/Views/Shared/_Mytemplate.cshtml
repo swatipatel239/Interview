@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!--
+
+    Template 2076 Zentro
+
+    http://www.tooplate.com/view/2076-zentro
+
+    -->
+    <!-- JAVASCRIPT JS FILES -->
+    <script src="@Url.Content("~/Content/MyTemplate/")js/jquery.js"></script>
+    <script src="@Url.Content("~/Content/MyTemplate/")js/bootstrap.min.js"></script>
+    <script src="@Url.Content("~/Content/MyTemplate/")js/jquery.parallax.js"></script>
+    <script src="@Url.Content("~/Content/MyTemplate/")js/smoothscroll.js"></script>
+    <script src="@Url.Content("~/Content/MyTemplate/")js/nivo-lightbox.min.js"></script>
+    <script src="@Url.Content("~/Content/MyTemplate/")js/wow.min.js"></script>
+    <script src="@Url.Content("~/Content/MyTemplate/")js/custom.js"></script>
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/MyTemplate/")css/bootstrap.min.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/MyTemplate/")css/animate.min.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/MyTemplate/")css/font-awesome.min.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/MyTemplate/")css/nivo-lightbox.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/MyTemplate/")css/nivo_themes/default/default.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/MyTemplate/")css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  
+    
+
+    <section class="preloader">
+        <div class="sk-spinner sk-spinner-pulse"></div>
+    </section>
+
+    <!-- navigation section -->
+    <section class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" onclick="location.href='@Url.Action("Index", "Home")'" >Swati Patel Caterers</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home" class="smoothScroll">HOME</a></li>
+                    <li><a href="#gallery" class="smoothScroll">FOOD GALLERY</a></li>
+                    <li><a href="#menu" class="smoothScroll">SPECIAL MENU</a></li>
+                    <li><a href="#contact" class="smoothScroll">CONTACT</a></li>
+                    <li>@Html.ActionLink("ADMIN-LOGIN", "Login", "Admin")</li>
+                </ul>
+               @*<button type="submit" value="AdminLogin" class="smoothScroll btn btn-default" onclick="location.href='@Url.Action("Login", "Admin")'">Admin Login</button>*@
+            </div>
+        </div>
+    </section>
+    <div>
+        @RenderSection("scripts", required: false)
+        @RenderBody()
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+﻿
+
+    @using (Ajax.BeginForm("OrderBreakfast", "Home", new AjaxOptions
+    {
+       
+        UpdateTargetId = "test",
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "POST"
+    }))
+
+    {
+        <div id="test">
+            <h4>Price for Berekfast  <span>£5 per person</span></h4>
+            <img src="~/Content/MyTemplate/images/brekfast.jpg" class="img-rounded pull-xs-left">
+
+            <h5></h5>
+            <br />
+            <div class="col-md-6 col-sm-6">
+                <fieldset>
+                    Please Select <select id="brekfasttype" name="bftype">
+                        <option value="">Bataka pauva</option>
+
+                        <option value="0">Upma</option>
+
+                        <option value="1">Dokda</option>
+
+                        
+                    </select>
+                </fieldset>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <fieldset>
+                    How Many People <select id="ppltype" name="ppltype">
+                        <option value="">5</option>
+                        <option value="0">10</option>
+                        <option value="1">15</option>
+                        <option selected="selected" value="1">20</option>
+                    </select>
+                </fieldset>
+            </div>
+          
+            <div class="col-md-6 col-sm-6">
+             
+                <input name="Name1" type="text" class="form-control" id="Name1" placeholder="Name">
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <input name="Phone1" type="number" class="form-control" id="number1" placeholder="Number">
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <input name="Location1" type="text" class="form-control" id="YourLocation1" placeholder="Your Location">
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <input name="email1" type="email" class="form-control" id="email1" placeholder="Email">
+            </div>
+            <div class="col-md-12 col-sm-12">
+                <textarea name="message1" rows="8" class="form-control" id="message1" placeholder="Message"></textarea>
+            </div>
+
+            <div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
+                <br />
+                <input name="Submit" type="submit" class="form-control" id="submit1" value="Ordern Breakfast!">
+            </div>
+
+        </div>
+
+    }
+   

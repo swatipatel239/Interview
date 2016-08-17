@@ -1,0 +1,160 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Mytemplate.cshtml";
+}
+<!-- home section -->
+<section id="home" class="parallax-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h1>Welcome to Swati's Pure Vegetarian Kitchen</h1>
+                <h2>Authentic Vegetarian Cuisine </h2>
+                <a href="#gallery" class="smoothScroll btn btn-default">Look For MORE</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- gallery section -->
+<section id="gallery" class="parallax-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8 col-sm-12 text-center">
+                <h1 class="heading">Food Gallery</h1>
+                <hr>
+            </div>
+            <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
+                <a href="@Url.Content("~/Content/MyTemplate/")images/gallery-img1.png" data-lightbox-gallery="zenda-gallery"><img src="@Url.Content("~/Content/MyTemplate/")images/gallery-img1.png" alt="gallery img"></a>
+                <div>
+                    <h3>Vegetarian Main Courses</h3>
+                    <span>Paneer Tika Masala / Dal Makhani / Vegetable Kheema</span>
+                </div>
+                <a href="@Url.Content("~/Content/MyTemplate/")images/gallery-img2.png" data-lightbox-gallery="zenda-gallery"><img src="@Url.Content("~/Content/MyTemplate/")images/gallery-img2.png" alt="gallery img"></a>
+                <div>
+                    <h3>Punjabi Vegetarian Cuisine</h3>
+                    <span>Tomato / Rosemary / Lemon</span>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.9s">
+                <a href="@Url.Content("~/Content/MyTemplate/")images/img-salad.png" data-lightbox-gallery="zenda-gallery"><img src="@Url.Content("~/Content/MyTemplate/")images/img-salad.png" alt="gallery img"></a>
+                <div>
+                    <h3>Traditional Sweet Salad</h3>
+                    <span>Mutter & Regan / Beans with Vegitable / Green</span>
+                </div>
+                <a href="@Url.Content("~/Content/MyTemplate/")images/imageslider-5.png" data-lightbox-gallery="zenda-gallery"><img src="@Url.Content("~/Content/MyTemplate/")images/imageslider-5.png" alt="gallery img"></a>
+                <div>
+                    <h3>Chutneys & Pickles</h3>
+                    <span>Cucumber Raita / Fruit Raita / Green Chutney</span>
+                </div>
+            </div>
+            @*<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <a href="@Url.Content("~/Content/MyTemplate/")images/gallery-img3.jpg" data-lightbox-gallery="zenda-gallery"><img src="@Url.Content("~/Content/MyTemplate/")images/gallery-img3.jpg" alt="gallery img"></a>
+                    <div>
+                        <h3>Lemon-Rosemary Bakery</h3>
+                        <span>Bread / Rosemary / Orange</span>
+                    </div>
+                </div>*@
+            <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.9s">
+                <a href="@Url.Content("~/Content/MyTemplate/")images/img-dhokra.png" data-lightbox-gallery="zenda-gallery"><img src="@Url.Content("~/Content/MyTemplate/")images/img-dhokra.png" alt="gallery img"></a>
+                <div>
+                    <h3>Starters & Farsan</h3>
+                    <span>Yellow Dhokra / White Dhokra / Yellow Dhokra& Patra</span>
+                </div>
+                <a href="@Url.Content("~/Content/MyTemplate/")images/imageslider-3.png" data-lightbox-gallery="zenda-gallery"><img src="@Url.Content("~/Content/MyTemplate/")images/imageslider-3.png" alt="gallery img"></a>
+                <div>
+                    <h3>Traditional Sweet Deserts</h3>
+                    <span>Aloo Chaat / Bateta Pava Makai / Bateta Vada</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- menu section -->
+
+@section Scripts{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <!-- this script is needed for Microsoft JQuery Unobtrusive Ajax -->
+
+}
+
+<section id="menu" class="parallax-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8 col-sm-12 text-center">
+                <h1 class="heading">Place an Online Order</h1>
+                <hr>
+               
+            </div>
+            <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
+                @Html.ValidationSummary()
+                @Html.Action("_OrderBreakfast", "Home")
+
+            </div>
+            <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
+                @Html.Action("_OrderLunch", "Home")
+
+            </div>
+            <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
+                @Html.Action("_OrderDinner", "Home")
+            </div>
+        </div>
+
+        </div>
+</section>
+
+@Html.Action("Contactus", "Home")
+<!-- team section -->
+<!-- contact section -->
+<!-- footer section -->
+<footer class="parallax-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
+                <h2 class="heading">Contact Info.</h2>
+                <div class="ph">
+                    <p><i class="fa fa-phone"></i> Phone</p>
+                    <h4>07472183337</h4>
+                </div>
+                <div class="address">
+                    <p><i class="fa fa-map-marker"></i> Our Location</p>
+                    <h4>31,Purley way,Croydon,CR0 3JU</h4>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
+                <h2 class="heading">Order Delivery Hours</h2>
+                <p>Sunday <span>10:30 AM - 10:00 PM</span></p>
+                <p>Mon-Fri <span>9:00 AM - 8:00 PM</span></p>
+                <p>Saturday <span>11:30 AM - 10:00 PM</span></p>
+            </div>
+            <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
+                <h2 class="heading">Follow Us</h2>
+                <ul class="social-icon">
+                    <li><a href="#" class="fa fa-facebook wow bounceIn" data-wow-delay="0.3s"></a></li>
+                    <li><a href="#" class="fa fa-twitter wow bounceIn" data-wow-delay="0.6s"></a></li>
+                    <li><a href="#" class="fa fa-behance wow bounceIn" data-wow-delay="0.9s"></a></li>
+                    <li><a href="#" class="fa fa-dribbble wow bounceIn" data-wow-delay="0.9s"></a></li>
+                    <li><a href="#" class="fa fa-github wow bounceIn" data-wow-delay="0.9s"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- copyright section -->
+<section id="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h3>Swati's Pure Aunthentic Vegetarian Kitchen</h3>
+                <p>
+                    Copyright © Swati Patel
+
+                     <a rel="nofollow" href="http://www.tooplate.com" target="_parent">SwatiPatel.Uk</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GujaratiCateringModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AdminLogin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Leads">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Number" Type="int" />
+    <Property Name="Location" Type="ntext" />
+    <Property Name="email" Type="text" />
+    <Property Name="message" Type="ntext" />
+  </EntityType>
+  <EntityType Name="tblBreakfast">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderType" Type="text" />
+    <Property Name="Items" Type="text" />
+    <Property Name="Name" Type="text" />
+    <Property Name="numer" Type="nchar" MaxLength="10" />
+    <Property Name="Location" Type="text" />
+    <Property Name="email" Type="text" />
+    <Property Name="Message" Type="text" />
+  </EntityType>
+  <EntityContainer Name="GujaratiCateringModelStoreContainer">
+    <EntitySet Name="AdminLogin" EntityType="Self.AdminLogin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Leads" EntityType="Self.Leads" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblBreakfast" EntityType="Self.tblBreakfast" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

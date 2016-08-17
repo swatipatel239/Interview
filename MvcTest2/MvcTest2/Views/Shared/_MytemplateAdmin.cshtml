@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!--
+
+    Template 2076 Zentro
+
+    http://www.tooplate.com/view/2076-zentro
+
+    -->
+    <!-- JAVASCRIPT JS FILES -->
+    <script src="@Url.Content("~/Content/MyTemplate/")js/jquery.js"></script>
+    <script src="@Url.Content("~/Content/MyTemplate/")js/bootstrap.min.js"></script>
+    <script src="@Url.Content("~/Content/MyTemplate/")js/jquery.parallax.js"></script>
+    <script src="@Url.Content("~/Content/MyTemplate/")js/smoothscroll.js"></script>
+    <script src="@Url.Content("~/Content/MyTemplate/")js/nivo-lightbox.min.js"></script>
+    <script src="@Url.Content("~/Content/MyTemplate/")js/wow.min.js"></script>
+    <script src="@Url.Content("~/Content/MyTemplate/")js/custom.js"></script>
+
+    <link href="@Url.Content("~/Content/Gridmvc.css")" rel="stylesheet" />  
+   
+    <link href="@Url.Content("~/Content/Gridmvc.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" />
+    <script src="@Url.Content("~/Scripts/gridmvc.min.js")"></script>  
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/MyTemplate/")css/bootstrap.min.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/MyTemplate/")css/animate.min.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/MyTemplate/")css/font-awesome.min.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/MyTemplate/")css/nivo-lightbox.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/MyTemplate/")css/nivo_themes/default/default.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/MyTemplate/")css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  
+    
+
+    <section class="preloader">
+        <div class="sk-spinner sk-spinner-pulse"></div>
+    </section>
+   
+    <!-- navigation section -->
+    <section class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+               
+                <a href="~/Home/Index" class="navbar-brand">Swati Patel Caterers</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                    <li><a href="#login" class="smoothScroll">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div>
+        @RenderSection("scripts", required: false)
+        @RenderBody()
+    </div>
+</body>
+</html>
